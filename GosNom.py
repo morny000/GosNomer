@@ -69,10 +69,6 @@ def analyze_license_plate(license_plate):
     features['is_happy_number'] = digits in happy_numbers
 
 
-
-    features['region'] = region
-
-
     features["digits_match_region"] = digits == region if len(region) == 3 else False
 
     prestigious_regions = ["77", "99", "199", "777", "78", "98"]
@@ -162,3 +158,4 @@ analysis = analyze_license_plate(license_plate)
 print("\nРезультаты анализа:")
 for key, value in analysis.items():
     print(f"{key}: {value}")
+
